@@ -1,3 +1,39 @@
+/* Navigation Bar Styling */
+.goto {
+    list-style: none;
+    margin: 0;
+    padding: 15px 0; /* Adjust padding as needed */
+    display: flex;
+    justify-content: center;
+    background-color: var(--color-bg-dark); /* Darker green background */
+    position: fixed; /* Makes the nav bar stick to the top */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Ensures it stays on top of other content */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Subtle shadow for depth */
+}
+
+.goto li {
+    margin: 0 25px; /* Space between navigation items */
+}
+
+.goto li a {
+    text-decoration: none;
+    color: var(--color-light-text); /* Light text on dark background */
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 1.1rem; /* Slightly larger font for nav links */
+    transition: color 0.3s ease-in-out;
+}
+
+.goto li a:hover {
+    color: var(--color-secondary-yellow); /* Yellow on hover */
+}
+
+/* Adjust body padding to prevent content from going under fixed nav bar */
+
+
 /* General Styling & Color Variables */
 :root {
     /* Primary Colors (Yellow-Green Scheme) */
