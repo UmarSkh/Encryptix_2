@@ -30,9 +30,9 @@
     color: var(--color-secondary-yellow);
 }
 
-body {
+/* body {
     padding-top: 70px;
-}
+} */
 
 :root {
     --color-primary-green: #4CAF50;
