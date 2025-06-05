@@ -1,0 +1,366 @@
+/* General Styling & Color Variables */
+:root {
+    /* Primary Colors (Yellow-Green Scheme) */
+    --color-primary-green: #4CAF50; /* A vibrant green */
+    --color-secondary-yellow: #FFC107; /* A warm yellow (for name, some links) */
+    --color-accent-green: #8BC34A;   /* A lighter green for accents/hovers/light backgrounds */
+    --color-accent-yellow: #FFEB3B; /* A brighter yellow for highlights */
+
+    /* Neutral & Text Colors */
+    --color-dark-text: #333333; /* Dark gray for main body text */
+    --color-light-text: #F8F8F8; /* Near-white for text on dark backgrounds */
+    --color-heading-text: #212121; /* Very dark gray for main headings */
+    --color-hr-border: #E0E0E0; /* Light gray for horizontal rules */
+
+    /* Backgrounds */
+    --color-bg-light: #F0F4C3; /* A very light, soft greenish-yellow for light sections */
+    --color-bg-dark: #388E3C;  /* A darker green for contrasting sections (e.g., footer) */
+}
+
+body {
+    margin: 0;
+    text-align: center;
+    font-family: 'Merriweather', serif; /* Kept user's font */
+    color: var(--color-dark-text); /* Updated color */
+    background-color: var(--color-bg-light); /* Updated color */
+}
+
+h1 {
+    font-family: 'Sacramento', cursive;
+    margin: 50px auto 0 auto; /* Adjusted margin */
+    font-size: 5.625rem; /* Approx. 90px, slightly larger than 5rem */
+    color: var(--color-secondary-yellow); /* Updated color */
+}
+
+h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem; /* Approx. 40px, slightly larger than 2rem */
+    color: var(--color-heading-text); /* Updated color */
+    font-weight: normal;
+    padding-bottom: 10px; /* Added for consistency with previous suggestion */
+}
+
+h3 {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--color-primary-green); /* Updated color */
+    font-weight: normal;
+    font-size: 1.5rem; /* Added for consistency */
+}
+
+p {
+    line-height: 2;
+}
+
+strong {
+    font-weight: bold; /* Ensure strong tag applies bold */
+}
+
+hr {
+    border: dotted var(--color-hr-border) 6px; /* Updated color */
+    border-bottom: none;
+    width: 4%;
+    margin: 100px auto; /* Adjusted margin for better spacing */
+}
+
+a {
+    color: var(--color-primary-green); /* Default link color */
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--color-accent-green); /* Hover color */
+}
+
+/* Specific style for CP link */
+.cp-link {
+    color: var(--color-secondary-yellow); /* Make this link stand out more */
+    text-decoration: underline;
+}
+
+.cp-link:hover {
+    color: var(--color-accent-yellow);
+}
+
+
+/* Top Container (Hero Section) */
+.top-co {
+    background-color: var(--color-primary-green); /* Updated color */
+    position: relative;
+    padding-top: 100px;
+    padding-bottom: 20px; /* Added for consistent spacing */
+    color: var(--color-light-text); /* Added for text inside top-co */
+}
+
+.cloud1 {
+    height: 100px;
+    width: 200px;
+    position: absolute;
+    top: 50px;
+    right: 250px;
+}
+
+.cloud2 {
+    height: 100px;
+    width: 200px;
+    position: absolute;
+    bottom: 250px;
+    left: 200px;
+}
+
+.mount {
+    height: 300px;
+    width: 600px;
+    display: block; /* Ensures no extra space below */
+    margin: 0 auto; /* Centers the mountain */
+}
+
+/* Middle Container */
+.middle-container {
+    padding: 50px 0; /* Consistent padding */
+    background-color: var(--color-bg-light); /* Added for overall middle section */
+}
+
+/* Hello Section */
+.hello-section { /* Formerly .profile */
+    margin-bottom: 50px; /* Consistent spacing */
+}
+
+.profile-pic {
+    width: 200px; /* Kept user's width but added height */
+    height: 200px;
+    border-radius: 50%;
+    margin-bottom: 30px;
+    object-fit: cover; /* Ensures image fits if aspect ratio is off */
+    border: 5px solid var(--color-accent-green); /* Added border to fit color scheme */
+}
+
+.desc {
+    width: 60%; /* Adjusted for better readability with new content */
+    margin: 0 auto 30px;
+}
+
+/* Skills Section */
+.skills {
+    margin-bottom: 50px; /* Consistent spacing */
+}
+
+.skill-row {
+    width: 60%; /* Adjusted width for better readability */
+    margin: 50px auto 100px auto; /* More vertical spacing */
+    text-align: left;
+    line-height: 2;
+    display: flex; /* Using flexbox instead of float */
+    align-items: center; /* Vertically align items */
+    gap: 30px; /* Space between image and text */
+}
+
+/* For alternating layout, e.g., image on right */
+.skill-row:nth-child(even) {
+    flex-direction: row-reverse; /* Reverse order for even skill rows */
+}
+
+.skill-icon { /* Replaces .computer-img and .chillies-img */
+    width: 100px; /* Consistent icon size */
+    height: 100px;
+    flex-shrink: 0; /* Prevent icon from shrinking */
+    border-radius: 10px; /* Slightly rounded corners for icons */
+    background-color: var(--color-accent-yellow); /* Yellow background for icons */
+    padding: 10px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Subtle shadow */
+}
+
+.skill-row > div { /* Style the new div wrapping skill text */
+    flex-grow: 1; /* Allow text to take up remaining space */
+}
+
+/* Projects Section */
+.projects {
+    margin-bottom: 50px; /* Consistent spacing */
+}
+
+.project-row {
+    width: 70%; /* Wider for projects */
+    margin: 50px auto 70px auto;
+    text-align: left;
+    padding: 20px;
+    border: 1px solid var(--color-hr-border); /* Light border */
+    border-radius: 10px;
+    background-color: #FFFFFF; /* White background for project cards */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Subtle shadow */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align text to left */
+    gap: 15px;
+}
+
+.project-row h3 {
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+.project-img {
+    width: 80px; /* Smaller icon for projects */
+    height: 80px;
+    margin-bottom: 15px;
+    background-color: var(--color-secondary-yellow); /* Yellow background for project icons */
+    border-radius: 50%; /* Circular icons */
+    padding: 5px;
+    box-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+}
+
+.project-row p {
+    margin: 0; /* Remove default paragraph margins */
+    font-size: 0.95rem;
+}
+
+.project-row strong {
+    color: var(--color-dark-text); /* Ensure bold text is visible */
+}
+
+.project-link {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 15px;
+    background-color: var(--color-primary-green);
+    color: var(--color-light-text);
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.project-link:hover {
+    background-color: var(--color-accent-green);
+}
+
+/* Achievements Section */
+.achievements {
+    margin-bottom: 50px; /* Consistent spacing */
+}
+
+.achievement-item {
+    width: 60%;
+    margin: 30px auto;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    text-align: left;
+    background-color: #FFFFFF;
+    padding: 15px 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+}
+
+.achievement-icon {
+    width: 60px; /* Consistent icon size */
+    height: 60px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background-color: var(--color-accent-green); /* Green background for achievement icons */
+    padding: 5px;
+    box-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+}
+
+.achievement-item p {
+    margin: 0;
+    font-size: 1rem;
+    color: var(--color-dark-text);
+}
+
+
+/* Contact Me Section */
+.contact-msg {
+    margin: 40px auto 60px;
+    width: 60%; /* Adjusted for better readability */
+}
+
+.btn {
+    background: var(--color-primary-green); /* Updated color */
+    background-image: -webkit-linear-gradient(top, var(--color-primary-green), var(--color-accent-green));
+    background-image: -moz-linear-gradient(top, var(--color-primary-green), var(--color-accent-green));
+    background-image: -ms-linear-gradient(top, var(--color-primary-green), var(--color-accent-green));
+    background-image: -o-linear-gradient(top, var(--color-primary-green), var(--color-accent-green));
+    background-image: linear-gradient(to bottom, var(--color-primary-green), var(--color-accent-green));
+    border-radius: 13px; /* Kept user's border-radius */
+    box-shadow: 1px 1px 1px rgba(0,0,0,0.4); /* Used rgba for smoother shadow */
+    font-family: 'Montserrat', sans-serif; /* Changed font to Montserrat */
+    color: var(--color-light-text); /* Updated color */
+    font-size: 20px;
+    padding: 10px 20px;
+    text-decoration: none;
+    transition: background-image 0.3s ease;
+    display: inline-block; /* Added for padding/margin */
+}
+
+.btn:hover {
+    background: var(--color-accent-green); /* Updated color */
+    background-image: -webkit-linear-gradient(top, var(--color-accent-green), var(--color-primary-green));
+    background-image: -moz-linear-gradient(top, var(--color-accent-green), var(--color-primary-green));
+    background-image: -ms-linear-gradient(top, var(--color-accent-green), var(--color-primary-green));
+    background-image: -o-linear-gradient(top, var(--color-accent-green), var(--color-primary-green));
+    background-image: linear-gradient(to bottom, var(--color-accent-green), var(--color-primary-green));
+    text-decoration: none;
+}
+
+/* Bottom Container (Footer) */
+.bottom-container {
+    margin: 70px auto 0px;
+    padding: 40px 0px 20px 0px;
+    background-color: var(--color-bg-dark); /* Updated color */
+    color: var(--color-light-text); /* Added for text */
+}
+
+.footer-link {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--color-secondary-yellow); /* Updated color */
+    margin: 0 20px; /* Added horizontal margin */
+    transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+    color: var(--color-light-text); /* Change to white on hover */
+}
+
+.copyright {
+    color: var(--color-hr-border); /* Updated color */
+    font-size: 0.75rem; /* Approx. 12px, slightly smaller than 14px */
+    padding: 20px 0; /* Added padding */
+}
+
+/* Responsive Design (Example, integrate with your existing phone.css files) */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 3.5rem;
+    }
+    h2 {
+        font-size: 1.8rem;
+    }
+    .top-co {
+        padding-top: 50px;
+    }
+    .cloud1, .cloud2 {
+        width: 100px;
+    }
+    .mount {
+        width: 80%;
+        height: auto; /* Ensure aspect ratio is maintained */
+    }
+    .desc, .skill-row, .project-row, .achievement-item, .contact-msg {
+        width: 85%;
+        flex-direction: column; /* Stack items on small screens */
+        text-align: center; /* Center text for stacked items */
+    }
+    /* Ensure skill rows don't reverse order on small screens */
+    .skill-row:nth-child(even) {
+        flex-direction: column;
+    }
+    .skill-icon, .project-img, .achievement-icon {
+        margin-right: 0;
+        margin-bottom: 15px; /* Add space when stacked */
+    }
+    .project-row, .achievement-item {
+        align-items: center; /* Center items within project/achievement rows */
+    }
+    .footer-link {
+        margin: 10px 10px; /* Less margin on small screens */
+    }
+}
